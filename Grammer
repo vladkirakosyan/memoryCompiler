@@ -1,0 +1,7 @@
+Program = [DataSegment] CodeSegment {CodeSegment}
+
+DataSegment = 'DATA SEGMENT: \n' {Definitions} SegmentTerminator
+Definitions =  Type Ident '=' Constant '\n'
+
+CodeSegment = 'CODE SEGMENT: \n' SubProgram {SubProgram} SegmentTerminator
+
